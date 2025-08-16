@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+# Create virtual environment
+python3 -m venv /usr/local/lib/drone-surveillance/venv
+
+# Activate virtual environment and install dependencies
+source /usr/local/lib/drone-surveillance/venv/bin/activate
+pip install --upgrade pip
+pip install -r /usr/local/lib/drone-surveillance/requirements.txt
+
+# Set up systemd service
+systemctl daemon-reload
+systemctl enable drone-surveillance.service
+
+# Set proper permissions
+chown -R root:root /usr/local/lib/drone-surveillance
+chmod -R 755 /usr/local/lib/drone-surveillance
+
+exit 0 

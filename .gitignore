@@ -8,7 +8,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+venv-3.12
 build/
+include
+share
 develop-eggs/
 dist/
 downloads/

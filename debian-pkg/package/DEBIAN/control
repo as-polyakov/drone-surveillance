@@ -1,0 +1,11 @@
+Package: drone-surveillance
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: arm64
+Depends: python3 (>= 3.7), python3-venv, python3-pip
+Maintainer: Your Name <your.email@example.com>
+Description: Drone Surveillance System
+ A Python-based drone surveillance system that uses computer vision
+ to detect fires and other objects of interest. The system integrates
+ with DroneKit for drone control and GPS coordinate tracking.

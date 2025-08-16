@@ -1,0 +1,14 @@
+[Unit]
+Description=Drone Surveillance System
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/local/lib/drone-surveillance
+ExecStart=/usr/local/lib/drone-surveillance/venv/bin/python3 /usr/local/lib/drone-surveillance/video.py -d rtsp -c tcp:0.0.0.0:5760
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 

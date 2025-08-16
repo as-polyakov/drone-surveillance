@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+# Stop and disable the service
+systemctl stop drone-surveillance.service
+systemctl disable drone-surveillance.service
+
+# Remove virtual environment
+rm -rf /usr/local/lib/drone-surveillance/venv
+
+exit 0 

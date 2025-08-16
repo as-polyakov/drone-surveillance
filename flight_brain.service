@@ -1,0 +1,10 @@
+[Unit]
+Description=Main drone brain
+
+[Service]
+Type=simple
+StandardOutput=journal
+ExecStart=source /home/myst/dev/drone-surveillance/bin/activate && python3 //home/myst/dev/drone-surveillance/video.py
+
+[Install]
+WantedBy=default.target
